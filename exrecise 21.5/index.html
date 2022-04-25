@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .input-cont {
+      display: flex;
+    }
+    .smiley {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png') no-repeat center center/cover;
+      width: 100px;
+      height: 100px;
+    }
+    .smiley-cont{
+      display: flex;
+      margin: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>How many smileys do you want?</h1>
+    <div class="input-cont">
+      <input class="input" type="text">
+      <button class="btn" type="button">Submit</button>
+    </div>
+    <div class="smiley-cont"></div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
