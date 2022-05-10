@@ -25,13 +25,18 @@ async function getMovieData(movieName) {
     console.log('error n');
   }
 }
-
+const arr = []
 function createCard(movieData) {
   const cardContainer = document.querySelector('.card-container')
   const card = document.createElement('div')
   card.classList.add('card')
   cardContainer.appendChild(card)
   createCardContent(movieData,card)
+  arr.push(card)
+  if (arr.length === 2) {
+    arr[0].remove()
+    arr.shift()
+  }
 }
 function createCardContent(movieData,card) { 
   console.log(movieData);
