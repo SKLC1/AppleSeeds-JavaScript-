@@ -24,8 +24,9 @@ const getRecipe = async (recipeID) => {
         recipeID
       );
     });
-  };
-   getIDs()
+};
+
+getIDs()
     .then((IDs) => {
       console.log(IDs);
       return getRecipe(IDs[2]);
@@ -36,3 +37,15 @@ const getRecipe = async (recipeID) => {
     .catch((error) => {
       console.log("It is an error!");
     });
+
+const printR = async () => {
+  try{
+    const arrOfIDS = await getIDs();
+    console.log(arrOfIDS);
+    const getRec = await getRecipe(arrOfIDS[2]);
+    console.log(getRec);
+  } catch{
+    console.log("It is an error!");
+  }
+}
+printR()

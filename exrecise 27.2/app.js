@@ -8,17 +8,18 @@
 // in a .then, .catch.
  
 const makeAllCaps = (arr) =>{
-  let res = '';
-  res = arr.map((word)=>{
-    return word.toString().toUpperCase()
+  return new Promise((resolve, reject)=> {
+    let res = '';
+    res = arr.map((word)=>{
+      return word.toString().toUpperCase()
+    })
   })
-  sortWords(res)
 }
 const sortWords = (arr) => {
   let isNot = false;
   arr.forEach(word => {
     word.split('').forEach(letter =>{
-      if (parseInt(letter)) {
+      if (parseInt(letter)) { // checked for a-z not for string because "sort by alphabetical order
         isNot = true
       }
     })
@@ -29,6 +30,7 @@ const sortWords = (arr) => {
     .then((arr)=>{console.log(arr.sort())}) 
     .catch(()=>{console.log('no');})
 }
+
 makeAllCaps(['jason','is','aa'])
 makeAllCaps(['jas2on','is','is'])
 makeAllCaps(['jas2on',2,'is','is'])
