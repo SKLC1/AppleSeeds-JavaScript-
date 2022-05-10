@@ -25,11 +25,15 @@ function appendJoke(content) {
 //   .catch(()=>console.log('error'))
 // }
 async function getText () {
-  const response = await fetch('https://api.jokes.one/jod')
-  const data = await response.json()
-  const title = data.contents.jokes[0].joke.title;
-  const jokeText = data.contents.jokes[0].joke.text;
-  appendJoke(title)
-  appendJoke(jokeText)
+  try{
+    const response = await fetch('https://api.jokes.one/jod')
+    const data = await response.json()
+    const title = data.contents.jokes[0].joke.title;
+    const jokeText = data.contents.jokes[0].joke.text;
+    appendJoke(title)
+    appendJoke(jokeText)
+  } catch {
+    console.log('error');
+  }
 }
 

@@ -5,13 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(9, 9, 46);
+      padding: 20px;
+    }
+    .users-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .image{
+      width: 400px;
+      height: 400px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .card{
+      width: 50%;
+    }
+
+  </style>
 </head>
 <body>
   <div class="container">
     <input type="text" class="input">
     <button class="getUser">Get</button>
   </div>
-  
+  <div class="users-container"></div>
   <script src="./app.js"></script>
 </body>
 </html>
